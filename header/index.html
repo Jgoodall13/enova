@@ -1,1 +1,65 @@
-"html"  
+<style>
+
+    *{
+        font-family: "Open Sans"
+    }
+
+    #pageBodyWrapper {
+        padding-top: 100px;
+    }
+
+    .enova-header {
+        background-color: #005580;
+        height: 100px;
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+        box-shadow: 2px 9px 11px -6px rgba(0, 0, 0, 0.41);
+    }
+
+    .enova-logo {
+        height: 68px;
+        margin-top: 15px;
+    }
+
+    .white {
+        color: #ffffff;
+    }
+
+    .fa-user,
+    .fa-shopping-cart,
+    .cart_info {
+        color: white;
+        font-size: 2em;
+    }
+
+    .fa-user {
+        margin-right: 20px;
+    }
+
+    .header-right {
+        height: 100px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+</style>
+
+<div class="container-fluid enova-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <a href="/"><img src="/assets/img/enova/logo.svg" alt="" class="enova-logo"></a>
+            </div>
+            <div class="col-xs-6 header-right">
+                <a href="/account.jhtm">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a href="/viewCart.jhtm">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="cart_info"> (#cartItems#)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

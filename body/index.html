@@ -1,0 +1,197 @@
+<style>
+    #pageBody {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .whole-body {
+        padding: 0;
+    }
+
+    .hero-desktop {
+        width: 100%;
+    }
+
+    .hero-mobile {
+        display: none;
+        width: 100%;
+    }
+
+    .countbox {
+        background: #37b0e2;
+        margin: 70px 0;
+    }
+
+    .limited{
+        text-align: center;
+    }
+
+    .timer-title {
+        color: white;
+        font-size: 35px
+    }
+
+    .pop-bar {
+        border-bottom: 2px solid #37b0e2;
+        margin-bottom: 20px;
+    }
+
+    .pop-title {
+        color: black;
+        font-size: 35px;
+    }
+
+    .items-row {
+        margin: 50px;
+    }
+
+    .item-box {
+        text-align: center;
+        height: 442px;
+    }
+
+    .product-image {
+        height: 300px;
+        width: 300px;
+    }
+
+    .item-desc {
+        font-size: 20px
+    }
+
+    .item-sku {
+        font-size: 20px
+    }
+
+    .item-price {
+        font-size: 20px
+    }
+
+    .price-blue {
+        color: #37b0e2;
+    }
+
+    /* COUNTER */
+
+
+    #clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+    }
+
+    .break{
+        height: 9px;
+    }
+
+    .days-div,
+    .hours-div,
+    .mins-div {
+        text-align: center;
+        width: 80px;
+    }
+
+    .counter-days,
+    .counter-hours,
+    .counter-mins {
+        background: white;
+        color: #37b0e2;
+        padding: 8px;
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .days-text, .hours-text, .mins-text{
+        color: white;
+        font-size: 20px;
+    }
+
+
+    @media(max-width: 767px) {
+        .hero-desktop {
+            display: none;
+        }
+        .hero-mobile {
+            display: block;
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .items-row {
+            margin: 0 -15px;
+        }
+    }
+</style>
+
+<div class="container-fluid whole-body">
+    <div class="hero-box">
+        <img src="/assets/img/enova/hero_desktop.png" alt="" class="hero-desktop">
+        <img src="/assets/img/enova/hero_mobile.png" alt="" class="hero-mobile">
+    </div>
+    <div class="container body-container">
+        <div class="countbox row">
+            <div class="col-md-4 col-md-offset-1 limited">
+                <h4 class="timer-title">Limited time left to shop!</h4>
+            </div>
+            <div class="col-md-7 counter-box">
+                <div id="clock"></div>
+            </div>
+        </div>
+        <div class="pop-bar">
+            <h4 class="pop-title">Pop Up Shop</h4>
+        </div>
+        <div class="row items-row">
+            <div class="col-xs-6 item-box">
+                <a href="/product.jhtm?sku=ENO001">
+                    <img src="/assets/Image/Product/detailsbig/ENO001D.jpg" alt="" class="product-image img-one">
+                </a>
+                <p class="item-desc">SPORT-TEK POM POM TEAM BEANIE</p>
+                <p class="item-sku">ENO001</p>
+                <p class="item-price">As low as:
+                    <span class="price-blue">$10.70</span>
+                </p>
+            </div>
+            <div class="col-xs-6 item-box">
+                <a href="/product.jhtm?sku=ENO002">
+                    <img src="/assets/Image/Product/detailsbig/ENO002D.jpg" alt="" class="product-image img-two">
+                </a>
+                <p class="item-desc">14 OZ INSULATED CAMP MUG</p>
+                <p class="item-sku">ENO002</p>
+                <p class="item-price">As low as:
+                    <span class="price-blue">$11.98</span>
+                </p>
+            </div>
+            <div class="col-xs-6 item-box">
+                <a href="/product.jhtm?sku=ENO003-BLUE">
+                    <img src="/assets/Image/Product/detailsbig/ENO003D.jpg" alt="" class="product-image img-three">
+                </a>
+                <p class="item-desc">FRUIT OF THE LOOM SOFSPUN CREWNECK SWEATSHIRT</p>
+                <p class="item-sku">ENO003</p>
+                <p class="item-price">As low as:
+                    <span class="price-blue">$8.85</span>
+                </p>
+            </div>
+            <div class="col-xs-6 item-box">
+                <a href="/product.jhtm?sku=ENO004-BLACK">
+                    <img src="/assets/Image/Product/detailsbig/ENO004D.jpg" alt="" class="product-image img-four">
+                </a>
+                <p class="item-desc">PORT & COMPANY 1/4 ZIP PULLOVER SWEATSHIRT</p>
+                <p class="item-sku">ENO004</p>
+                <p class="item-price">As low as:
+                    <span class="price-blue">$19.20</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#clock').countdown('2018/12/25', function (event) {
+        var $this = $(this).html(event.strftime('' +
+            '<div class="days-div"><span class="counter-days">%D</span><div class="break"></div><span class="days-text">Days</span></div><div class="hours-div"><span class="counter-hours">%H</span><div class="break"></div><span class="hours-text">Hours</span></div><div class="mins-div"><span class="counter-mins">%M</span><div class="break"></div><span class="mins-text">Minutes</span></div>'
+        ));
+    });
+</script>

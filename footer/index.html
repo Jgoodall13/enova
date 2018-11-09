@@ -1,0 +1,91 @@
+<style>
+    div#footer_wrapper {
+        display: none;
+    }
+
+    .enova-footer {
+        background-color: #005580;
+        height: 200px;
+    }
+
+    .footer-links {
+        text-align: center;
+        margin: 60px 0 40px 0;
+    }
+
+    .footer-link{
+        color: white;
+        font-size: 18px;
+    }
+
+    .footer-link:hover{
+        color: white;
+    }
+
+    .love-box {
+        text-align: center;
+    }
+
+    .love-logo {
+        width: 300px;
+        height: auto;
+    }
+
+
+/* GLOBALS!! */
+
+    #floatingPricingSummaryBox, .addToList_btn_wrapper, .addToQuote_btn_wrapper{
+        display: none;
+    }
+
+    .accordion_box:nth-child(2), .accordion_box:nth-child(3){
+        display: none;
+    }
+
+    .details_sku, .total_price_value{
+        color: #37b0e2 !important;
+    }
+
+    .addToCart_btn, .continueShopping_btn, .proceedCheckout_btn{
+        background-image: none;
+        background-color: #37b0e2;
+        border: 1px solid #37b0e2;
+        color: white;
+    }
+
+    .addToCart_btn:hover, .continueShopping_btn:hover, .proceedCheckout_btn:hover{
+        background-color: white;
+        color: #37b0e2;
+        border: 1px solid #37b0e2;
+    }  
+
+
+    @media(max-width: 767px){
+        .footer-link{
+            font-size: 17px;
+        }
+        .enova-header{
+            padding: 0;
+        }
+    }
+
+</style>
+
+<div class="enova-footer container-fluid">
+    <div class="footer-links">
+        <a href="mailto:enovapopup@overturepromo.com" class="footer-link">Contact Us</a>
+        <span class="footer-link"> | </span>
+        <a href="/assets/img/enova/Privacy.pdf" target="blank" class="footer-link">Privacy Policy</a>
+        <span class="footer-link"> | </span>
+        <a href="/assets/img/enova/Terms.pdf" target="blank" class="footer-link">Terms</a>
+    </div>
+    <div class="love-box">
+        <img src="/assets/img/enova/love.svg" alt="" class="love-logo">
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.headerTitle.paymentMethodTitle').append('<div style="font-size: 12px;">*Only full-time Enova employees based in the United States are eligible for payroll deduction. Continent workers and employees working in the United Kingdom or Brazil are not eligible for payroll deduction.</div>')
+    })
+</script>
